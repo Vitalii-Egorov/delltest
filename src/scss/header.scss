@@ -1,0 +1,341 @@
+//====================================================================================================
+.menu-open {
+	.menu__body {
+		left: 0;
+
+		&:before {
+			left: 0;
+		}
+	}
+}
+
+.header {
+	background-color: #FFFFFF;
+
+	&__container {}
+
+	&__body {
+		position: relative;
+		z-index: 999;
+		@include adaptiveValue("min-height", 123, 90);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: left;
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+	}
+
+	&__search {
+		flex: 1 1 auto;
+		@include adaptiveValue("margin-left", 50.77, 0);
+		font-size: rem(18.4);
+	}
+
+	&__action {}
+}
+
+.main {
+
+	&_menu {}
+
+	&__image-ibg {
+		@include adaptiveValue("width", 70, 60);
+		@include adaptiveValue("height", 70, 60);
+		margin-right: 60px;
+	}
+}
+
+.menu {
+
+	&__icon {}
+
+	&__body {
+		@media (max-width: $pc) {
+			position: fixed;
+			width: 100%;
+			height: 390px;
+			overflow: auto;
+			top: 90px;
+			left: -100%;
+			background: #fff;
+			transition: all .3s ease-in-out;
+			padding: 56px 0px 64px 38px;
+
+			&:before {
+				content: '';
+				position: fixed;
+				width: 100%;
+				height: 50px;
+				top: 90px;
+				left: -100%;
+				transition: all .3s ease-in-out;
+				z-index: 2;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: 45px;
+
+		@media (max-width: $pc) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		text-align: right;
+		font-style: normal;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+}
+
+
+.search {
+	flex: 1 1 auto;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-right: 30.83px;
+	position: relative;
+	/* Ширина контейнера */
+	overflow: hidden;
+
+	&__input {
+		width: 30%;
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		transition: width 0.3s ease;
+
+		&:focus {
+			width: 70%;
+		}
+
+		@media (max-width: 555px) {
+			display: none;
+		}
+	}
+
+
+
+	&__icon {}
+}
+
+.icon {}
+
+.icon-search {}
+
+.action {
+
+	&__body {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 30, 15);
+
+	}
+
+	&__link {
+		position: relative;
+
+
+		span {
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background-color: #48A4EB;
+			border-radius: 50%;
+			width: 16px;
+			height: 16px;
+
+			color: #FFF;
+			text-align: center;
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+		}
+	}
+}
+
+.icon-lk {}
+
+.rr {
+	position: relative;
+
+	&:hover {
+		@media (any-hover: hover) {
+
+			// Показать другой элемент при наличии поддержки hover
+			.sub-menu {
+				display: block;
+				position: absolute;
+				top: 86px;
+				left: -360%;
+			}
+		}
+	}
+}
+
+.icon-signal {
+	@media (max-width: $pc) {
+		display: none;
+	}
+}
+
+.icon-heart {
+	@media (max-width: $pc) {
+		display: none;
+	}
+}
+
+.icon-clarity_shopping-bag-line {}
+
+
+.sub-menu {
+	display: none;
+	width: 405px;
+	height: 389px;
+	border-radius: 20px;
+	background: #FFF;
+	position: relative;
+	z-index: 9999;
+	filter: drop-shadow(0px 1.7530173063278198px 9.39116382598877px rgba(0, 0, 0, 0.06)) drop-shadow(0px 14px 75px rgba(0, 0, 0, 0.13));
+
+	&::after {
+		position: absolute;
+		z-index: 1;
+		top: -5px;
+		left: 48%;
+		content: '';
+		background: #fff;
+		width: 18px;
+		height: 18px;
+		border-radius: 2px;
+		transform: rotate(45deg);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: transparent;
+		top: -40px;
+		left: 0;
+		width: 405px;
+		height: 40px;
+	}
+
+	color: #000;
+	font-family: Roboto;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 150%;
+
+	&_link {
+		margin-right: 20px;
+	}
+
+	&__user {
+		display: flex;
+		align-items: center;
+		padding: 30.49px 0px 30px 30px;
+	}
+
+	&__name {}
+
+	&__body {}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__line {
+		width: 100%;
+		height: 1px;
+		background: #F2F2F2;
+	}
+
+	&__item {}
+
+	&__link {
+		display: inline-flex;
+		margin-right: 20px;
+		padding: 0px 0px 0px 30px;
+	}
+}
+
+
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+
+	@media (max-width: $pc) {
+
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

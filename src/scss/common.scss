@@ -1,0 +1,89 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.grey {
+    border-radius: 20px;
+    background: #F2F2F2;
+}
+
+.ligrey {
+    border-radius: 20px;
+    background: #F9F9F9;
+}
+
+///
+
+
+.iconi- {
+    display: inline-flex;
+    color: #FFF;
+    text-align: center;
+    font-family: "circe_bold";
+    font-size: 18.743px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 187.5%;
+    @include adaptiveValue("width", 55, 45);
+    @include adaptiveValue("height", 55, 45);
+    background: #33A9FF;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon2 {
+    @include adaptiveValue("width", 70, 50);
+    @include adaptiveValue("height", 70, 50);
+    border-radius: 10px;
+    background-color: #343A41;
+    position: relative;
+    color: white;
+
+    &::before {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        @include adaptiveValue("font-size", 36, 31);
+    }
+
+    &:hover {
+        background-color: #d4d4d4;
+    }
+}
+
+.icon {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #F9F9F9;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        font-size: rem(24);
+    }
+
+    &:hover {
+        background-color: #d4d4d4;
+    }
+}
+
+.gradient {
+    opacity: 0.6;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 11.75%, rgba(255, 255, 255, 0.00) 162.35%);
+    font-size: 255px;
+
+    font-family: "Rubik Mono One";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 92.687%;
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.action__link {
+    display: inline-flex;
+}
